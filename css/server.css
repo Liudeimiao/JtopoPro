@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+}
+.borderSide{
+    background: #4A4A4A;
+    float: left;
+    border:1px solid rgb(0,0,0);
+}
+
+/*两侧边栏*/
+.knob-left{
+    height: 100%;
+    width: 4%;
+    float: left;
+    margin-left: 0.5%;
+}
+.knob-right{
+    height: 100%;
+    width: 4%;
+    float: right;
+    margin-right: 0.5%;
+}
+.knob-icon{
+    margin: 0 auto;
+}
+
+.cabinet{
+    height: 100%;
+    width: 90%;
+    background: #F2F2F0;
+    margin-left: 5%;
+    border-left: 1px solid #0d0d0d;
+    border-right: 1px solid #0d0d0d;
+    box-sizing: border-box;
+    position: relative;
+}
+.warehouse{
+    width: 100%;
+    min-height: 180px;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+}
+.board-box{
+    width: 100%;
+    height: 90%;
+    background: red;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*板卡槽标号*/
+.label-box{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    border-bottom: 1px solid #2b2b2b;
+    border-top: 1px solid #2b2b2b;
+    box-sizing: border-box;
+}
+.label-box >.label{
+    flex : auto;
+    background-color: #4A4A4A;
+    color: #E6E6E6;
+    box-sizing: border-box;
+    border-right: 1px solid black;
+    text-align: center;
+    position: relative;
+}
+.label-box >.label:last-child{
+    border-right: none;
+}
+
+/*A类型板卡*/
+.board-A{
+    height: 100%;
+    box-sizing:border-box;
+    border-right: #0d0d0d 1px solid;
+    flex: auto;
+    position: relative;
+    background-color: white;
+}
+.board-A >.board-A-top{
+    width: 100%;
+    height: 12%;
+    background: url("../img/board-A.png") no-repeat;
+    background-size:100% 100%;
+    position: absolute;
+}
+.board-A >.board-A-port-group-1{
+    margin-top: 10px;
+}
+.board-A >.board-A-port-group-2{
+    margin-top: 10px;
+}
+.light-red{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 200%;
+    margin-left: 2px;
+    background: red;
+    border: black 1px solid;
+    box-sizing: border-box;
+}
+.light-green{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 1px;
+    margin-left: 2px;
+    background: green;
+    border: black 1px solid;
+    box-sizing: border-box;
+}
+.light-blue{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 1px;
+    margin-left: 2px;
+    background: dodgerblue;
+    border: black 1px solid;
+    box-sizing: border-box;
+}
+.light-gold{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 1px;
+    margin-left: 2px;
+    background: gold;
+    border: black 1px solid;
+    box-sizing: border-box;
+}
+
+/*B类型*/
+.board-B{
+    height: 100%;
+    box-sizing:border-box;
+    border-right: #0d0d0d 1px solid;
+    flex: auto;
+    position: relative;
+    background-color: white;
+}
+.board-B >.board-B-top{
+    width: 100%;
+    height: 12%;
+    background: url("../img/board-B.png") no-repeat;
+    background-size:100% 100%;
+    position: absolute;
+}
+.board-B >.board-B-port-group-2{
+    margin-top: 63px;
+}
+
+/*空白槽占位*/
+.board-O{
+    height:100%;
+    box-sizing:border-box;
+    border-right: #0d0d0d 1px solid;
+    float: left;
+    position: relative;
+    background-color: white;
+    font-size: 10px;
+    text-align: center;
+}
+.board-O > .empty1{
+    height: 18%;
+}
+.board-O > div{
+    height: 82%;
+    overflow: hidden;
+}
+
+/*去掉最后一个板卡的右边框*/
+.board-box > div:last-child{
+    border-right: none;
+}
+/*子元素占位，用于警报抓取第N个时没有误差*/
+.board-x > input{
+    width: 0;
+    height: 0;
+}
+/*板载的端口*/
+.mini-port{
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    margin-top: 1px;
+    margin-left: 2px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+
+}
+
+
+/*散热口（网状图片）*/
+.fan{
+    min-height: 20px;
+    background: #2b2b2b;
+    /*margin-top: -2px;*/
+}
+
+/*网线端口*/
+.portbox{
+    min-height: 35px;
+    overflow: hidden;
+    background: #4A4A4A;
+}
+.portbox > .portbox-row{
+    height: 50%;
+    background: #2b2b2b;
+    display: flex;
+    flex: auto;
+}
+
+/*顶部与底部旋转风扇*/
+.topBottom{
+    min-height: 25px;
+    background: #4A4A4A;
+    display: flex;
+    justify-content: space-around;
+}
+.topBottom:last-child{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid black;
+}
+
+
+input{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.dataShow{
+    width: 30%;
+    float: right;
+    background: #00FFFF;
+    height: 100%;
+    margin-right: 10%;
+}
+.hoverData{
+    height: 20px;
+    border-radius: 3px;
+    background-color: #1c7430;
+    opacity: 0.9;
+    text-align: center;
+    position: fixed;
+    border: 1px solid #2b2b2b;
+    color: white;
+    padding: 3px;
+    letter-spacing: 2px;
+    top: -2000px;
+    left: -2000px;
+}
