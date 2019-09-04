@@ -132,15 +132,10 @@ $(document).ready(function() {
         container.width = width;
         container.height = height;
         // 默认流式布局
-        //container.layout = JTopo.layout.FlowLayout(40, 20);
+        container.layout = JTopo.layout.FlowLayout(40, 20);
         //设置容器透明度
         container.alpha = 0;
         //container.layout = JTopo.layout.GridLayout(4, 3);
-        container.textPosition = 'Middle_Center';
-        container.fontColor = '100,255,0';
-        container.font = '18pt 微软雅黑';
-        container.borderColor = '255,0,0';
-        container.borderRadius = 30; // 圆角
         return container;
     }
     
